@@ -12,44 +12,44 @@ export function WorkSection() {
   const [activeFilter, setActiveFilter] = useState("All");
   const { currentTheme } = useTheme();
 
-  const filters = ["All", "Web Design", "Mobile Apps", "Branding", "UI/UX"];
+  const filters = ["All", "Web Apps", "Frontend", "Full Stack"];
 
   const projects = [
     {
-      category: "Web Design",
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce solution with seamless checkout experience",
-      image: "https://images.unsplash.com/photo-1676792519027-7c42006d7b4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzU5OTQwNjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      tech: ["React", "Node.js", "Tailwind"],
+      category: "Web Apps",
+      title: "CT Bankbot",
+      description: "Intelligent multilingual chatbot providing 24/7 customer service for banking with seamless payment processing, account management, and live agent escalation",
+      image: "https://images.unsplash.com/photo-1682941664177-7920d0e59418?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYW5raW5nJTIwY2hhdGJvdCUyMGludGVyZmFjZXxlbnwxfHx8fDE3NjA1MzMwMDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      tech: ["React", "Node.js"],
       featured: true,
     },
     {
-      category: "Mobile Apps",
-      title: "Fitness Tracking App",
-      description: "Mobile app for tracking workouts and nutrition goals",
-      image: "https://images.unsplash.com/photo-1658953229625-aad99d7603b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzU5ODcyNjEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      tech: ["React Native", "Firebase", "Redux"],
+      category: "Frontend",
+      title: "Archudo",
+      description: "Centralized architectural project management platform streamlining task management, time tracking, purchase orders, and site visit documentation",
+      image: "https://images.unsplash.com/photo-1678512680110-19a1e548585c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmUlMjBwcm9qZWN0JTIwbWFuYWdlbWVudHxlbnwxfHx8fDE3NjA1MzMwMDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      tech: ["JavaScript", "HTML5", "CSS3"],
     },
     {
-      category: "Branding",
-      title: "Startup Brand Identity",
-      description: "Complete brand identity design for tech startup",
-      image: "https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFuZGluZyUyMGRlc2lnbnxlbnwxfHx8fDE3NTk5NzcxNzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      tech: ["Illustrator", "Figma", "Photoshop"],
+      category: "Full Stack",
+      title: "Trak Calendar",
+      description: "Dynamic calendar-based scheduling application with drag-and-drop scheduling, real-time updates, and filtering by date, status, and project",
+      image: "https://images.unsplash.com/photo-1642360912445-61d71dd98400?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYWxlbmRhciUyMHNjaGVkdWxpbmclMjBhcHB8ZW58MXx8fHwxNzYwNDU5MTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      tech: ["React", "Laravel", "Tailwind CSS"],
     },
     {
-      category: "UI/UX",
-      title: "SaaS Dashboard",
-      description: "Analytics dashboard with real-time data visualization",
-      image: "https://images.unsplash.com/photo-1629494893504-d41e26a02631?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1aSUyMGRlc2lnbiUyMG1vY2t1cHxlbnwxfHx8fDE3NTk5NzQ3MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      tech: ["Vue.js", "D3.js", "TypeScript"],
+      category: "Frontend",
+      title: "The Event Code",
+      description: "Luxury event planning website for professional event management company showcasing premium services through elegant and responsive design",
+      image: "https://images.unsplash.com/photo-1642685657866-45a4c48f43ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBldmVudCUyMGRlY29yYXRpb258ZW58MXx8fHwxNzYwNTMzMDEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      tech: ["React", "Tailwind CSS"],
     },
     {
-      category: "Web Design",
-      title: "Portfolio Website",
-      description: "Creative portfolio for photographer showcasing their work",
-      image: "https://images.unsplash.com/photo-1676792519027-7c42006d7b4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzU5OTQwNjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      tech: ["Next.js", "Sanity", "Tailwind"],
+      category: "Full Stack",
+      title: "BPM",
+      description: "Comprehensive government Business Process Management system with multi-role architecture for digitizing license and examination form submissions",
+      image: "https://images.unsplash.com/photo-1620887110499-d54ecf17cefb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb3Zlcm5tZW50JTIwZGlnaXRhbCUyMGZvcm1zfGVufDF8fHx8MTc2MDUzMzAwOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      tech: ["React", "Laravel", "MySQL"],
     },
   ];
 
@@ -175,22 +175,27 @@ export function WorkSection() {
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-600"
                     />
-                    <div
-                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center"
-                      style={{ backgroundColor: `${currentTheme.colors.accent}26` }}
-                    >
-                      <span
-                        className="font-['Montserrat'] px-6 py-3 rounded-lg"
-                        style={{
-                          backgroundColor: currentTheme.colors.accent,
-                          color: currentTheme.type === 'dark' ? '#0A1128' : '#FFFFFF',
-                          fontSize: "14px",
-                          fontWeight: 700,
-                        }}
+                    {project.title === "The Event Code" && (
+                      <a
+                        href="https://theeventcodes.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center"
+                        style={{ backgroundColor: `${currentTheme.colors.accent}26` }}
                       >
-                        View Project
-                      </span>
-                    </div>
+                        <span
+                          className="font-['Montserrat'] px-6 py-3 rounded-lg"
+                          style={{
+                            backgroundColor: currentTheme.colors.accent,
+                            color: currentTheme.type === 'dark' ? '#0A1128' : '#FFFFFF',
+                            fontSize: "14px",
+                            fontWeight: 700,
+                          }}
+                        >
+                          View Project
+                        </span>
+                      </a>
+                    )}
                     {project.featured && (
                       <div
                         className="absolute top-4 right-4 px-3 py-1 rounded-full"
@@ -245,7 +250,7 @@ export function WorkSection() {
                       {project.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech, i) => (
                         <span
                           key={i}
@@ -260,21 +265,6 @@ export function WorkSection() {
                         </span>
                       ))}
                     </div>
-
-                    <a
-                      href="#"
-                      className="inline-flex items-center gap-2 font-['Montserrat'] group/link"
-                      style={{
-                        fontSize: "13px",
-                        fontWeight: 600,
-                        color: currentTheme.colors.accent,
-                      }}
-                    >
-                      View Case Study
-                      <span className="group-hover/link:translate-x-1 transition-transform">
-                        →
-                      </span>
-                    </a>
                   </div>
                 </div>
               </motion.div>

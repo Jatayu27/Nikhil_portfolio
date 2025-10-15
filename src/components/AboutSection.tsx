@@ -20,16 +20,16 @@ export function AboutSection() {
   ];
 
   const stats = [
-    { number: "5+", label: "Years Experience" },
-    { number: "50+", label: "Projects Completed" },
-    { number: "15", label: "Awards Won" },
-    { number: "30+", label: "Happy Clients" },
+    { number: "3+", label: "Years Experience" },
+    { number: "25+", label: "Projects Completed" },
+    { number: "BCA", label: "Bachelor's Degree" },
+    { number: "15+", label: "Happy Clients" },
   ];
 
   const timeline = [
-    { year: "2020", milestone: "Started Freelancing" },
-    { year: "2022", milestone: "Led Design Team" },
-    { year: "2025", milestone: "Senior Designer" },
+    { year: "2018-21", milestone: "Bachelor of Computer Applications" },
+    { year: "2017-18", milestone: "12th Commerce (CGPA: 5.9)" },
+    { year: "BCA", milestone: "CGPA: 6.5/10" },
   ];
 
   return (
@@ -71,7 +71,7 @@ export function AboutSection() {
               lineHeight: 1.3,
             }}
           >
-            Building Digital Experiences That Matter
+            Transforming Ideas into Responsive Applications
           </motion.h2>
 
           <motion.p
@@ -84,7 +84,7 @@ export function AboutSection() {
               color: currentTheme.colors.textSecondary,
             }}
           >
-            Passionate about creating meaningful digital experiences
+            Passionate React Developer focused on creating seamless user experiences
           </motion.p>
         </div>
 
@@ -173,9 +173,7 @@ export function AboutSection() {
                   lineHeight: 1.85,
                 }}
               >
-                With over 5 years of experience in digital design and development, I've had the
-                privilege of working with startups and established companies to create products that
-                users love and businesses depend on.
+                React Developer with hands-on experience in identifying web-based user interactions along with designing & implementing highly-responsive user interface components by deploying React concepts. Proficient in translating designs & wireframes into high-quality code, and writing application interface code via Javascript and ReactJS workflows.
               </p>
               <p
                 className="font-['Montserrat']"
@@ -185,8 +183,7 @@ export function AboutSection() {
                   lineHeight: 1.85,
                 }}
               >
-                My approach combines strategic thinking with meticulous attention to detail,
-                ensuring every pixel serves a purpose and every interaction feels natural.
+                My expertise includes front-end optimization, API integration, and creating engaging user interfaces. I excel at identifying and resolving technical issues while maintaining code quality and performance standards.
               </p>
             </div>
 
@@ -279,23 +276,6 @@ export function AboutSection() {
                 </motion.div>
               ))}
             </div>
-
-            {/* CTA Button */}
-            <motion.button
-              whileHover={{ y: -2 }}
-              className="px-9 py-4 rounded-lg font-['Montserrat'] transition-all duration-300 group cursor-pointer"
-              style={{
-                backgroundColor: currentTheme.colors.accent,
-                color: currentTheme.type === 'dark' ? currentTheme.colors.primary : currentTheme.colors.background,
-                fontSize: "15px",
-                fontWeight: 600,
-              }}
-            >
-              Let's Work Together
-              <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
-                →
-              </span>
-            </motion.button>
           </motion.div>
         </div>
       </div>

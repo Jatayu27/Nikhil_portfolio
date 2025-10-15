@@ -14,12 +14,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (typeof window !== 'undefined') {
       try {
         const saved = localStorage.getItem('portfolio-theme');
-        return saved ? getThemeById(saved) : themes[0];
+        return saved ? getThemeById(saved) : getThemeById('cream-elegance');
       } catch {
-        return themes[0];
+        return getThemeById('cream-elegance');
       }
     }
-    return themes[0];
+    return getThemeById('cream-elegance');
   });
 
   useEffect(() => {

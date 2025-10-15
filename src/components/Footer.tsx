@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
-import { Linkedin, Github, Twitter, Dribbble, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
 
 export function Footer() {
@@ -14,13 +13,6 @@ export function Footer() {
     { name: "Skills", href: "#skills" },
     { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" },
-  ];
-
-  const socialLinks = [
-    { icon: Linkedin, href: "#" },
-    { icon: Github, href: "#" },
-    { icon: Twitter, href: "#" },
-    { icon: Dribbble, href: "#" },
   ];
 
   return (
@@ -41,7 +33,7 @@ export function Footer() {
       
       <div className="max-w-[1400px] mx-auto px-8 md:px-20">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-[40%_30%_30%] gap-12 mb-16">
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
           {/* Left Column - Brand */}
           <div>
             <h2
@@ -52,7 +44,7 @@ export function Footer() {
                 color: currentTheme.colors.text,
               }}
             >
-              John Doe
+              Nikhil Soni
             </h2>
             <p
               className="font-['Montserrat'] max-w-xs mb-7"
@@ -62,37 +54,8 @@ export function Footer() {
                 lineHeight: 1.6,
               }}
             >
-              Crafting digital experiences with precision, passion, and purpose.
+              Building responsive web applications with React, JavaScript, and modern development practices.
             </p>
-
-            {/* Social Icons */}
-            <div className="flex gap-5 mb-8">
-              {socialLinks.map((social, index) => {
-                const Icon = social.icon;
-                return (
-                  <motion.a
-                    key={index}
-                    href={social.href}
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    className="transition-all duration-300"
-                    style={{
-                      color: `${currentTheme.colors.accent}99`,
-                      filter: "drop-shadow(0 0 0px transparent)",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.color = currentTheme.colors.accent;
-                      e.currentTarget.style.filter = `drop-shadow(0 0 8px ${currentTheme.colors.accent}99)`;
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.color = `${currentTheme.colors.accent}99`;
-                      e.currentTarget.style.filter = "drop-shadow(0 0 0px transparent)";
-                    }}
-                  >
-                    <Icon size={20} />
-                  </motion.a>
-                );
-              })}
-            </div>
 
             <p
               className="font-['Montserrat']"
@@ -102,7 +65,7 @@ export function Footer() {
                 color: `${currentTheme.colors.textSecondary}99`,
               }}
             >
-              © 2025 John Doe. All rights reserved.
+              © 2025 Nikhil Soni. All rights reserved.
             </p>
           </div>
 
@@ -150,75 +113,6 @@ export function Footer() {
               ))}
             </ul>
           </div>
-
-          {/* Right Column - Newsletter */}
-          <div>
-            <h3
-              className="font-['Montserrat'] mb-5"
-              style={{
-                fontSize: "16px",
-                fontWeight: 600,
-                color: currentTheme.colors.text,
-                letterSpacing: "0.5px",
-              }}
-            >
-              Stay Updated
-            </h3>
-            <p
-              className="font-['Montserrat'] mb-5"
-              style={{
-                fontSize: "13px",
-                color: currentTheme.colors.textSecondary,
-                lineHeight: 1.6,
-              }}
-            >
-              Get occasional updates about my latest work and insights
-            </p>
-
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Thank you for subscribing!");
-              }}
-              className="flex mb-3"
-            >
-              <input
-                type="email"
-                placeholder="Your email"
-                required
-                className="flex-1 px-4 py-3 rounded-l-lg font-['Montserrat'] focus:outline-none"
-                style={{
-                  backgroundColor: currentTheme.colors.background,
-                  border: `1px solid ${currentTheme.colors.accent}40`,
-                  fontSize: "14px",
-                  color: currentTheme.colors.text,
-                }}
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 rounded-r-lg font-['Montserrat'] hover:brightness-110 transition-all duration-300"
-                style={{
-                  backgroundColor: currentTheme.colors.accent,
-                  color: currentTheme.type === 'dark' ? currentTheme.colors.primary : currentTheme.colors.background,
-                  fontSize: "14px",
-                  fontWeight: 600,
-                }}
-              >
-                Subscribe
-              </button>
-            </form>
-
-            <p
-              className="font-['Montserrat']"
-              style={{
-                fontSize: "11px",
-                fontWeight: 300,
-                color: `${currentTheme.colors.textSecondary}99`,
-              }}
-            >
-              No spam. Unsubscribe anytime.
-            </p>
-          </div>
         </div>
 
         {/* Footer Bottom */}
@@ -261,7 +155,7 @@ export function Footer() {
             }}
           >
             Designed & Developed with{" "}
-            <Heart size={14} fill={currentTheme.colors.accent} color={currentTheme.colors.accent} /> by John Doe
+            <Heart size={14} fill={currentTheme.colors.accent} color={currentTheme.colors.accent} /> by Nikhil Soni
           </p>
         </div>
       </div>

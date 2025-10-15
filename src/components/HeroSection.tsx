@@ -7,9 +7,9 @@ export function HeroSection() {
   const { currentTheme } = useTheme();
 
   const stats = [
-    { number: "5+", label: "Years" },
-    { number: "50+", label: "Projects" },
-    { number: "30+", label: "Clients" },
+    { number: "3+", label: "Years" },
+    { number: "25+", label: "Projects" },
+    { number: "15+", label: "Clients" },
   ];
 
   const getButtonTextColor = () => {
@@ -90,13 +90,13 @@ export function HeroSection() {
                 letterSpacing: "-0.4px",
               }}
             >
-              Crafting Digital{" "}
+              Building Digital{" "}
               <span
                 style={{
                   color: currentTheme.colors.accent,
                 }}
               >
-                Excellence
+                Experiences
               </span>
             </motion.h1>
 
@@ -112,7 +112,7 @@ export function HeroSection() {
                 letterSpacing: "0.5px",
               }}
             >
-              John Doe - Senior Product Designer
+              Nikhil Soni - React Developer
             </motion.p>
 
             <motion.p
@@ -127,8 +127,7 @@ export function HeroSection() {
                 lineHeight: 1.75,
               }}
             >
-              I transform complex problems into elegant, user-centered solutions that drive
-              business growth and delight users at every touchpoint.
+              React Developer with hands-on experience in identifying web-based user interactions along with designing & implementing highly-responsive user interface components by deploying React concepts.
             </motion.p>
 
             <motion.div
@@ -147,6 +146,10 @@ export function HeroSection() {
                   fontSize: "15px",
                   fontWeight: 700,
                 }}
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = `0 8px 30px ${currentTheme.colors.accent}66`;
                 }}
@@ -154,7 +157,7 @@ export function HeroSection() {
                   e.currentTarget.style.boxShadow = "none";
                 }}
               >
-                View My Work
+                Let's Work Together
               </motion.button>
 
               <motion.button
@@ -168,6 +171,7 @@ export function HeroSection() {
                   fontSize: "15px",
                   fontWeight: 700,
                 }}
+                onClick={() => window.open('https://drive.google.com/file/d/18EfxlEFA4Jj6-zj5KpFybf8ShDWiKX4q/view?usp=sharing', '_blank')}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = currentTheme.colors.accent;
                   e.currentTarget.style.color = currentTheme.type === 'dark' ? '#0A1128' : '#FFFFFF';

@@ -17,49 +17,29 @@ export function SkillsSection() {
       icon: Code,
       title: "Frontend",
       skills: [
-        { name: "React/Next.js", level: 5 },
-        { name: "TypeScript", level: 5 },
-        { name: "Tailwind CSS", level: 5 },
-        { name: "Vue.js", level: 4 },
-      ],
-    },
-    {
-      icon: Palette,
-      title: "Design",
-      skills: [
-        { name: "Figma", level: 5 },
-        { name: "Adobe XD", level: 4 },
-        { name: "Photoshop", level: 4 },
-        { name: "Illustrator", level: 4 },
+        { name: "React.js", level: 5 },
+        { name: "JavaScript", level: 5 },
+        { name: "HTML5", level: 5 },
+        { name: "CSS3", level: 5 },
       ],
     },
     {
       icon: Server,
-      title: "Backend",
+      title: "Development",
       skills: [
-        { name: "Node.js", level: 4 },
-        { name: "Python", level: 3 },
+        { name: "API Integration", level: 4 },
         { name: "REST APIs", level: 4 },
-        { name: "GraphQL", level: 3 },
-      ],
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile",
-      skills: [
-        { name: "React Native", level: 4 },
-        { name: "Flutter", level: 3 },
-        { name: "iOS Design", level: 4 },
-        { name: "Android Design", level: 4 },
+        { name: "Performance Optimization", level: 4 },
+        { name: "Responsive Design", level: 5 },
       ],
     },
     {
       icon: Layers,
       title: "UI/UX",
       skills: [
-        { name: "User Research", level: 5 },
-        { name: "Prototyping", level: 5 },
-        { name: "Wireframing", level: 5 },
+        { name: "User Interface Design", level: 4 },
+        { name: "Wireframing", level: 4 },
+        { name: "Component Design", level: 5 },
         { name: "Design Systems", level: 4 },
       ],
     },
@@ -67,17 +47,37 @@ export function SkillsSection() {
       icon: Database,
       title: "Tools",
       skills: [
-        { name: "Git/GitHub", level: 5 },
+        { name: "Git/GitHub", level: 4 },
         { name: "VS Code", level: 5 },
-        { name: "Jira", level: 4 },
-        { name: "Notion", level: 4 },
+        { name: "DirectLine", level: 4 },
+        { name: "Chatbot Development", level: 4 },
+      ],
+    },
+    {
+      icon: Smartphone,
+      title: "Languages",
+      skills: [
+        { name: "English", level: 5 },
+        { name: "Hindi", level: 5 },
+        { name: "Technical Writing", level: 4 },
+        { name: "Documentation", level: 4 },
+      ],
+    },
+    {
+      icon: Palette,
+      title: "Other Skills",
+      skills: [
+        { name: "Problem Solving", level: 5 },
+        { name: "Code Refactoring", level: 4 },
+        { name: "Cross-functional Collaboration", level: 4 },
+        { name: "Market Research", level: 3 },
       ],
     },
   ];
 
   const tools = [
-    "React", "Figma", "TypeScript", "Node.js", "Tailwind", "Next.js",
-    "Adobe XD", "Git", "VS Code", "Photoshop", "Vue.js", "Firebase"
+    "React", "JavaScript", "HTML", "CSS", "API Integration", "Git",
+    "DirectLine", "Chatbot", "VS Code", "Performance Optimization", "Responsive Design", "UI/UX"
   ];
 
   return (

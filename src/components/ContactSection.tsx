@@ -2,45 +2,19 @@
 
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
-import { useRef, useState } from "react";
-import { Mail, Phone, MapPin, Linkedin, Github, Twitter, Dribbble, Check, Download } from "lucide-react";
-import { toast } from "sonner@2.0.3";
+import { useRef } from "react";
+import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
 
 export function ContactSection() {
   const ref = useRef(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { currentTheme } = useTheme();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    toast.success("Message sent! I'll get back to you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const socialLinks = [
     { icon: Linkedin, href: "#", name: "LinkedIn" },
-    { icon: Github, href: "#", name: "GitHub" },
-    { icon: Twitter, href: "#", name: "Twitter" },
-    { icon: Dribbble, href: "#", name: "Dribbble" },
+    { icon: Github, href: "https://github.com/nikhilsoni27", name: "GitHub" },
   ];
 
   return (
@@ -133,165 +107,12 @@ export function ContactSection() {
           </motion.p>
         </div>
 
-        {/* Contact Layout */}
-        <div className="grid md:grid-cols-[60%_40%] gap-16">
-          {/* Left Column - Form */}
+        {/* Contact Info - Centered */}
+        <div className="max-w-2xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
-            data-obstacle
-          >
-            <form
-              onSubmit={handleSubmit}
-              className="p-12 rounded-3xl glass-water liquid-shimmer"
-              style={{
-                backdropFilter: "blur(16px) saturate(150%)",
-                border: `1px solid ${currentTheme.colors.accent}33`,
-                boxShadow: `0 8px 48px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08)`,
-              }}
-            >
-              <div className="space-y-5">
-                <div>
-                  <label
-                    className="font-['Montserrat'] block mb-2"
-                    style={{
-                      fontSize: "13px",
-                      fontWeight: 500,
-                      color: currentTheme.colors.accent,
-                      letterSpacing: "0.5px",
-                    }}
-                  >
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="John Doe"
-                    className="w-full px-5 py-4 rounded-xl font-['Montserrat'] transition-all duration-250 focus:outline-none focus:ring-2"
-                    style={{
-                      backgroundColor: `${currentTheme.colors.background}80`,
-                      border: `1px solid ${currentTheme.colors.accent}40`,
-                      fontSize: "15px",
-                      color: currentTheme.colors.text,
-                    }}
-                  />
-                </div>
-
-                <div>
-                  <label
-                    className="font-['Montserrat'] block mb-2"
-                    style={{
-                      fontSize: "13px",
-                      fontWeight: 500,
-                      color: currentTheme.colors.accent,
-                      letterSpacing: "0.5px",
-                    }}
-                  >
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="john@example.com"
-                    className="w-full px-5 py-4 rounded-xl font-['Montserrat'] transition-all duration-250 focus:outline-none focus:ring-2"
-                    style={{
-                      backgroundColor: `${currentTheme.colors.background}80`,
-                      border: `1px solid ${currentTheme.colors.accent}40`,
-                      fontSize: "15px",
-                      color: currentTheme.colors.text,
-                    }}
-                  />
-                </div>
-
-                <div>
-                  <label
-                    className="font-['Montserrat'] block mb-2"
-                    style={{
-                      fontSize: "13px",
-                      fontWeight: 500,
-                      color: currentTheme.colors.accent,
-                      letterSpacing: "0.5px",
-                    }}
-                  >
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    placeholder="Project Inquiry"
-                    className="w-full px-5 py-4 rounded-xl font-['Montserrat'] transition-all duration-250 focus:outline-none focus:ring-2"
-                    style={{
-                      backgroundColor: `${currentTheme.colors.background}80`,
-                      border: `1px solid ${currentTheme.colors.accent}40`,
-                      fontSize: "15px",
-                      color: currentTheme.colors.text,
-                    }}
-                  />
-                </div>
-
-                <div>
-                  <label
-                    className="font-['Montserrat'] block mb-2"
-                    style={{
-                      fontSize: "13px",
-                      fontWeight: 500,
-                      color: currentTheme.colors.accent,
-                      letterSpacing: "0.5px",
-                    }}
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    placeholder="Tell me about your project..."
-                    className="w-full px-5 py-4 rounded-xl font-['Montserrat'] transition-all duration-250 focus:outline-none focus:ring-2 resize-vertical"
-                    style={{
-                      backgroundColor: `${currentTheme.colors.background}80`,
-                      border: `1px solid ${currentTheme.colors.accent}40`,
-                      fontSize: "15px",
-                      color: currentTheme.colors.text,
-                    }}
-                  />
-                </div>
-
-                <motion.button
-                  type="submit"
-                  disabled={isSubmitting}
-                  whileHover={{ y: -2 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-5 rounded-xl font-['Montserrat'] transition-all duration-300 disabled:opacity-50"
-                  style={{
-                    background: `linear-gradient(135deg, ${currentTheme.colors.accent} 0%, ${currentTheme.colors.accent}CC 100%)`,
-                    color: currentTheme.type === 'dark' ? currentTheme.colors.primary : currentTheme.colors.background,
-                    fontSize: "16px",
-                    fontWeight: 600,
-                  }}
-                >
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </motion.button>
-              </div>
-            </form>
-          </motion.div>
-
-          {/* Right Column - Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.4 }}
             className="space-y-6"
           >
             {/* Email Card */}
@@ -315,7 +136,7 @@ export function ContactSection() {
                 Email me at
               </p>
               <a
-                href="mailto:hello@johndoe.com"
+                href="mailto:nikhilsoni1030@gmail.com"
                 className="font-['Montserrat'] transition-colors"
                 style={{
                   fontSize: "16px",
@@ -323,7 +144,7 @@ export function ContactSection() {
                   color: currentTheme.colors.text,
                 }}
               >
-                hello@johndoe.com
+                nikhilsoni1030@gmail.com
               </a>
             </div>
 
@@ -348,7 +169,7 @@ export function ContactSection() {
                 Call me at
               </p>
               <a
-                href="tel:+1234567890"
+                href="tel:+919462514026"
                 className="font-['Montserrat'] transition-colors"
                 style={{
                   fontSize: "16px",
@@ -356,7 +177,7 @@ export function ContactSection() {
                   color: currentTheme.colors.text,
                 }}
               >
-                +1 (234) 567-890
+                +91 9462514026
               </a>
             </div>
 
@@ -388,7 +209,7 @@ export function ContactSection() {
                   color: currentTheme.colors.text,
                 }}
               >
-                San Francisco, CA (PST)
+                Udaipur, Rajasthan (IST)
               </p>
             </div>
 
@@ -465,36 +286,6 @@ export function ContactSection() {
               </div>
             </div>
 
-            {/* Download Resume Button */}
-            <motion.button
-              whileHover={{ y: -2 }}
-              className="w-full py-4 rounded-xl font-['Montserrat'] transition-all duration-300 flex items-center justify-center gap-2"
-              style={{
-                border: `2px solid ${currentTheme.colors.accent}`,
-                color: currentTheme.colors.accent,
-                fontSize: "14px",
-                fontWeight: 700,
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = currentTheme.colors.accent;
-                e.currentTarget.style.color = currentTheme.type === 'dark' ? '#0A1128' : '#FFFFFF';
-                const icon = e.currentTarget.querySelector('svg');
-                if (icon) {
-                  icon.style.color = currentTheme.type === 'dark' ? '#0A1128' : '#FFFFFF';
-                }
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "transparent";
-                e.currentTarget.style.color = currentTheme.colors.accent;
-                const icon = e.currentTarget.querySelector('svg');
-                if (icon) {
-                  icon.style.color = currentTheme.colors.accent;
-                }
-              }}
-            >
-              <Download size={18} />
-              Download Resume PDF
-            </motion.button>
           </motion.div>
         </div>
       </div>

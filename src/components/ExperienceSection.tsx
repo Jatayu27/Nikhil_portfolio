@@ -14,64 +14,77 @@ export function ExperienceSection() {
 
   const experiences = [
     {
-      company: "Tech Innovators Inc.",
-      role: "Senior Product Designer",
-      period: "Jan 2023 - Present",
+      company: "Shiv Technolabs",
+      role: "React Developer",
+      period: "Apr 2025 - Present",
       description:
-        "Leading design initiatives for flagship products, mentoring junior designers, and establishing design systems.",
+        "Udaipur - Leading front-end development initiatives and creating engaging digital content across various platforms.",
       achievements: [
-        "Redesigned core product increasing user engagement by 45%",
-        "Established company-wide design system used across 8 products",
-        "Led team of 5 designers on major feature launches",
-        "Reduced design-to-development handoff time by 60%",
+        "Conducted market research to identify emerging trends and consumer preferences",
+        "Provided valuable insights for product development and positioning",
+        "Oversaw the creation of engaging content for various platforms",
+        "Collaborated with internal teams and external agencies to ensure brand consistency and relevance",
       ],
-      skills: ["Figma", "React", "Design Systems", "User Research"],
+      skills: ["React", "JavaScript", "Market Research", "Content Strategy"],
     },
     {
-      company: "Creative Digital Studio",
-      role: "Product Designer",
-      period: "Jun 2021 - Dec 2022",
+      company: "Atlantick Solutions",
+      role: "React Developer",
+      period: "Jan 2023 - July 2023",
       description:
-        "Designed user-centered solutions for diverse clients across e-commerce, SaaS, and mobile applications.",
+        "Ahmedabad - Developed chatbot solutions and integrated APIs to enhance customer support and automate interactions.",
       achievements: [
-        "Delivered 25+ client projects with 100% satisfaction rate",
-        "Improved client product conversion rates by average of 30%",
-        "Conducted user research sessions with 200+ participants",
-        "Won 'Best Digital Design' award at Design Summit 2022",
+        "Developed and implemented a chatbot solution to enhance customer support",
+        "Collaborated with cross-functional teams to gather requirements and design conversational flows",
+        "API integration using DirectLine for receiving real-time data to the frontend",
+        "Successfully automated customer interactions improving response time",
       ],
-      skills: ["UI/UX", "Prototyping", "Adobe XD", "User Testing"],
+      skills: ["React", "API Integration", "DirectLine", "Chatbot Development"],
     },
     {
-      company: "StartUp Ventures",
-      role: "UI/UX Designer",
-      period: "Mar 2020 - May 2021",
+      company: "Celebal Technologies",
+      role: "React Developer - Internship",
+      period: "Aug 2021 - Oct 2022",
       description:
-        "Contributed to multiple product launches from concept to market, working closely with developers and stakeholders.",
+        "Jaipur - Focused on identifying and resolving front-end issues while optimizing performance and code quality.",
       achievements: [
-        "Designed MVP for 3 successful product launches",
-        "Created interactive prototypes for investor presentations",
-        "Collaborated with engineering on frontend implementation",
-        "Established user feedback loops and analytics tracking",
+        "Identified, diagnosed, and resolved front-end issues in web applications",
+        "Maintained and refactored existing code to improve performance and readability",
+        "Optimized front-end performance by minimizing load times",
+        "Enhanced application responsiveness across different devices",
       ],
-      skills: ["Wireframing", "Prototyping", "HTML/CSS", "Analytics"],
+      skills: ["React", "JavaScript", "Performance Optimization", "Code Refactoring"],
     },
   ];
 
   const education = [
     {
-      institution: "Design Academy",
-      degree: "Master's in Interaction Design",
-      year: "2019",
+      institution: "Mohanlal Sukhadia University",
+      degree: "Bachelor of Computer Applications (CGPA: 6.5/10)",
+      year: "2018 - 2021",
     },
     {
-      institution: "University of Technology",
-      degree: "Bachelor's in Computer Science",
-      year: "2017",
+      institution: "Central Public School",
+      degree: "12th Commerce (CGPA: 5.9/10)",
+      year: "2017-18",
     },
     {
-      institution: "Google UX Certificate",
-      degree: "UX Design Professional Certificate",
-      year: "2020",
+      institution: "Central Public School",
+      degree: "10th Grade (CGPA: 7.2/10)",
+      year: "2015-16",
+    },
+  ];
+
+  const certificates = [
+    {
+      name: "React Development",
+      issuer: "Professional Certification",
+      year: "2023",
+    },
+    {
+      name: "JavaScript Advanced",
+      issuer: "Web Development Course",
+      year: "2022",
     },
   ];
 
@@ -310,7 +323,7 @@ export function ExperienceSection() {
             Education & Certifications
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
             {education.map((edu, index) => (
               <motion.div
                 key={index}
@@ -374,6 +387,79 @@ export function ExperienceSection() {
               </motion.div>
             ))}
           </div>
+
+          {/* Certificates Section */}
+          {certificates.length > 0 && (
+            <div className="mt-12">
+              <h4
+                className="font-['Montserrat'] text-center mb-8"
+                style={{
+                  fontSize: "20px",
+                  fontWeight: 600,
+                  color: currentTheme.colors.accent,
+                  letterSpacing: "0.5px",
+                }}
+              >
+                Professional Certifications
+              </h4>
+              <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                {certificates.map((cert, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ delay: 1.5 + index * 0.1 }}
+                    whileHover={{ scale: 1.03, y: -4 }}
+                    className="p-5 rounded-xl glass-water liquid-shimmer transition-all duration-300"
+                    style={{
+                      backdropFilter: "blur(12px) saturate(150%)",
+                      border: `1px solid ${currentTheme.colors.accent}33`,
+                      boxShadow: `0 4px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.06)`,
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = `${currentTheme.colors.accent}66`;
+                      e.currentTarget.style.boxShadow = `0 8px 24px ${currentTheme.colors.accent}33, inset 0 1px 0 rgba(255, 255, 255, 0.1)`;
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = `${currentTheme.colors.accent}33`;
+                      e.currentTarget.style.boxShadow = `0 4px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.06)`;
+                    }}
+                    data-obstacle
+                  >
+                    <h5
+                      className="font-['Montserrat'] mb-1"
+                      style={{
+                        fontSize: "16px",
+                        fontWeight: 600,
+                        color: currentTheme.colors.text,
+                      }}
+                    >
+                      {cert.name}
+                    </h5>
+                    <p
+                      className="font-['Montserrat'] mb-2"
+                      style={{
+                        fontSize: "13px",
+                        color: currentTheme.colors.textSecondary,
+                      }}
+                    >
+                      {cert.issuer}
+                    </p>
+                    <p
+                      className="font-['Montserrat']"
+                      style={{
+                        fontSize: "12px",
+                        color: currentTheme.colors.accent,
+                        fontWeight: 500,
+                      }}
+                    >
+                      {cert.year}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          )}
         </motion.div>
       </div>
     </section>

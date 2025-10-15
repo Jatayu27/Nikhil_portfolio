@@ -73,7 +73,7 @@ export function Navigation() {
                 e.currentTarget.style.textShadow = "0 0 20px rgba(212, 175, 55, 0)";
               }}
             >
-              JD
+              NS
             </span>
             <div
               className="absolute -bottom-1 left-0 w-5 h-0.5"
