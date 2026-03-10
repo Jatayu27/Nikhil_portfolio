@@ -20,10 +20,10 @@ export function AboutSection() {
   ];
 
   const stats = [
-    { number: "3+", label: "Years Experience" },
-    { number: "25+", label: "Projects Completed" },
+    { number: "2.5+", label: "Years Experience" },
+    { number: "10+", label: "Projects Completed" },
     { number: "BCA", label: "Bachelor's Degree" },
-    { number: "15+", label: "Happy Clients" },
+    { number: "5+", label: "Happy Clients" },
   ];
 
   const timeline = [

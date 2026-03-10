@@ -14,46 +14,46 @@ export function ExperienceSection() {
 
   const experiences = [
     {
-      company: "Shiv Technolabs",
-      role: "React Developer",
-      period: "Apr 2025 - Present",
+      company: "Celebal Technologies",
+      role: "React Developer - Jaipur",
+      period: "Aug 2021 - Oct 2022",
       description:
-        "Udaipur - Leading front-end development initiatives and creating engaging digital content across various platforms.",
+        "Designed and developed an intelligent multilingual chatbot for comprehensive banking services and customer support.",
       achievements: [
-        "Conducted market research to identify emerging trends and consumer preferences",
-        "Provided valuable insights for product development and positioning",
-        "Oversaw the creation of engaging content for various platforms",
-        "Collaborated with internal teams and external agencies to ensure brand consistency and relevance",
+        "Built CT Bankbot, a 24/7 multilingual banking chatbot with voice input support",
+        "Implemented core banking features: payment processing, transfers, mobile recharges, and loan applications",
+        "Developed account management features including chequebook, debit card, and credit card requests",
+        "Integrated seamless escalation system to live agents for complex banking issues",
       ],
-      skills: ["React", "JavaScript", "Market Research", "Content Strategy"],
+      skills: ["React", "Node.js", "API Integration", "Chatbot Development"],
+    },
+    {
+      company: "Shiv Technolabs",
+      role: "React Developer - Ahmedabad",
+      period: "Jan 2023 - July 2023",
+      description:
+        "Developed a comprehensive Business Process Management system for government license and examination form submissions.",
+      achievements: [
+        "Built BPM, a multi-role government-focused web application with 5 distinct user modules",
+        "Implemented dynamic form builder with custom components (text fields, maps, file uploads, QR/barcode)",
+        "Developed role-based access control for Super Admin, Tenant, Super User, User, and Citizen roles",
+        "Integrated payment tracking and real-time form submission using React and Laravel APIs",
+      ],
+      skills: ["React", "PHP (Laravel)", "MySQL", "REST APIs"],
     },
     {
       company: "Atlantick Solutions",
-      role: "React Developer",
-      period: "Jan 2023 - July 2023",
+      role: "React Developer - Udaipur",
+      period: "Apr 2025 - Dec 2025",
       description:
-        "Ahmedabad - Developed chatbot solutions and integrated APIs to enhance customer support and automate interactions.",
+        "Developed architectural project management platform and calendar-based scheduling application.",
       achievements: [
-        "Developed and implemented a chatbot solution to enhance customer support",
-        "Collaborated with cross-functional teams to gather requirements and design conversational flows",
-        "API integration using DirectLine for receiving real-time data to the frontend",
-        "Successfully automated customer interactions improving response time",
+        "Built Archudo, an all-in-one platform for architectural project management and team collaboration",
+        "Developed Trak Calendar with drag-and-drop scheduling, real-time updates, and advanced filtering",
+        "Implemented interactive UI components with React and Tailwind CSS for responsive design",
+        "Integrated Laravel backend APIs for secure data flow and efficient state management",
       ],
-      skills: ["React", "API Integration", "DirectLine", "Chatbot Development"],
-    },
-    {
-      company: "Celebal Technologies",
-      role: "React Developer - Internship",
-      period: "Aug 2021 - Oct 2022",
-      description:
-        "Jaipur - Focused on identifying and resolving front-end issues while optimizing performance and code quality.",
-      achievements: [
-        "Identified, diagnosed, and resolved front-end issues in web applications",
-        "Maintained and refactored existing code to improve performance and readability",
-        "Optimized front-end performance by minimizing load times",
-        "Enhanced application responsiveness across different devices",
-      ],
-      skills: ["React", "JavaScript", "Performance Optimization", "Code Refactoring"],
+      skills: ["React", "Vanilla JS", "PHP (Laravel)", "Tailwind CSS"],
     },
   ];
 

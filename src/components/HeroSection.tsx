@@ -7,9 +7,9 @@ export function HeroSection() {
   const { currentTheme } = useTheme();
 
   const stats = [
-    { number: "3+", label: "Years" },
-    { number: "25+", label: "Projects" },
-    { number: "15+", label: "Clients" },
+    { number: "2.5+", label: "Years" },
+    { number: "10+", label: "Projects" },
+    { number: "5+", label: "Clients" },
   ];
 
   const getButtonTextColor = () => {
