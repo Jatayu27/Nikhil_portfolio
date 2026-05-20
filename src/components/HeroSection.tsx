@@ -174,12 +174,7 @@ export function HeroSection() {
                   fontSize: "15px",
                   fontWeight: 700,
                 }}
-                onClick={() =>
-                  window.open(
-                    "https://drive.google.com/file/d/18EfxlEFA4Jj6-zj5KpFybf8ShDWiKX4q/view?usp=sharing",
-                    "_blank",
-                  )
-                }
+                onClick={() => window.open("/Nikhil Soni_Resume.pdf", "_blank")}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor =
                     currentTheme.colors.accent;

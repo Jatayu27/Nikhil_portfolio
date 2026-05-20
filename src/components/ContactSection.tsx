@@ -13,7 +13,11 @@ export function ContactSection() {
   const { currentTheme } = useTheme();
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", name: "LinkedIn" },
+    {
+      icon: Linkedin,
+      href: "https://linkedin.com/in/nikhil-soni27",
+      name: "LinkedIn",
+    },
     { icon: Github, href: "https://github.com/nikhilsoni27", name: "GitHub" },
   ];
 
@@ -55,13 +59,17 @@ export function ContactSection() {
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none"
         style={{
-          background: currentTheme.type === 'dark' 
-            ? "radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%)"
-            : "radial-gradient(circle, rgba(0, 0, 0, 0.02) 0%, transparent 70%)",
+          background:
+            currentTheme.type === "dark"
+              ? "radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%)"
+              : "radial-gradient(circle, rgba(0, 0, 0, 0.02) 0%, transparent 70%)",
         }}
       />
 
-      <div ref={ref} className="max-w-[1200px] mx-auto px-8 md:px-20 relative z-10">
+      <div
+        ref={ref}
+        className="max-w-[1200px] mx-auto px-8 md:px-20 relative z-10"
+      >
         {/* Section Header */}
         <div className="text-center mb-16">
           <motion.div
@@ -103,7 +111,8 @@ export function ContactSection() {
               color: currentTheme.colors.textSecondary,
             }}
           >
-            Have a project in mind? Let's discuss how I can help bring your vision to life
+            Have a project in mind? Let's discuss how I can help bring your
+            vision to life
           </motion.p>
         </div>
 
@@ -125,7 +134,11 @@ export function ContactSection() {
               }}
               data-obstacle
             >
-              <Mail size={32} color={currentTheme.colors.accent} className="mb-3" />
+              <Mail
+                size={32}
+                color={currentTheme.colors.accent}
+                className="mb-3"
+              />
               <p
                 className="font-['Montserrat'] mb-2"
                 style={{
@@ -158,7 +171,11 @@ export function ContactSection() {
               }}
               data-obstacle
             >
-              <Phone size={32} color={currentTheme.colors.accent} className="mb-3" />
+              <Phone
+                size={32}
+                color={currentTheme.colors.accent}
+                className="mb-3"
+              />
               <p
                 className="font-['Montserrat'] mb-2"
                 style={{
@@ -191,7 +208,11 @@ export function ContactSection() {
               }}
               data-obstacle
             >
-              <MapPin size={32} color={currentTheme.colors.accent} className="mb-3" />
+              <MapPin
+                size={32}
+                color={currentTheme.colors.accent}
+                className="mb-3"
+              />
               <p
                 className="font-['Montserrat'] mb-2"
                 style={{
@@ -239,23 +260,34 @@ export function ContactSection() {
                         border: `1px solid ${currentTheme.colors.accent}4D`,
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = currentTheme.colors.accent;
-                        const icon = e.currentTarget.querySelector('svg');
+                        e.currentTarget.style.backgroundColor =
+                          currentTheme.colors.accent;
+                        const icon = e.currentTarget.querySelector("svg");
                         if (icon) {
-                          icon.style.stroke = currentTheme.type === 'dark' ? currentTheme.colors.primary : currentTheme.colors.background;
-                          icon.style.color = currentTheme.type === 'dark' ? currentTheme.colors.primary : currentTheme.colors.background;
+                          icon.style.stroke =
+                            currentTheme.type === "dark"
+                              ? currentTheme.colors.primary
+                              : currentTheme.colors.background;
+                          icon.style.color =
+                            currentTheme.type === "dark"
+                              ? currentTheme.colors.primary
+                              : currentTheme.colors.background;
                         }
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.backgroundColor = `${currentTheme.colors.accent}1F`;
-                        const icon = e.currentTarget.querySelector('svg');
+                        const icon = e.currentTarget.querySelector("svg");
                         if (icon) {
                           icon.style.stroke = currentTheme.colors.accent;
                           icon.style.color = currentTheme.colors.accent;
                         }
                       }}
                     >
-                      <Icon size={20} color={currentTheme.colors.accent} style={{ transition: 'all 0.3s' }} />
+                      <Icon
+                        size={20}
+                        color={currentTheme.colors.accent}
+                        style={{ transition: "all 0.3s" }}
+                      />
                     </motion.a>
                   );
                 })}
@@ -285,7 +317,6 @@ export function ContactSection() {
                 </p>
               </div>
             </div>
-
           </motion.div>
         </div>
       </div>
