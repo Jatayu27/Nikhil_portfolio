@@ -7,13 +7,13 @@ export function HeroSection() {
   const { currentTheme } = useTheme();
 
   const stats = [
-    { number: "2.5+", label: "Years" },
+    { number: "3.5+", label: "Years" },
     { number: "10+", label: "Projects" },
     { number: "5+", label: "Clients" },
   ];
 
   const getButtonTextColor = () => {
-    if (currentTheme.type === 'dark') return currentTheme.colors.primary;
+    if (currentTheme.type === "dark") return currentTheme.colors.primary;
     // For light themes, use high contrast color
     return currentTheme.colors.text;
   };
@@ -127,7 +127,10 @@ export function HeroSection() {
                 lineHeight: 1.75,
               }}
             >
-              React Developer with hands-on experience in identifying web-based user interactions along with designing & implementing highly-responsive user interface components by deploying React concepts.
+              React Developer with hands-on experience in identifying web-based
+              user interactions along with designing & implementing
+              highly-responsive user interface components by deploying React
+              concepts.
             </motion.p>
 
             <motion.div
@@ -142,13 +145,13 @@ export function HeroSection() {
                 className="px-9 py-4 rounded-lg font-['Montserrat'] transition-all duration-300"
                 style={{
                   backgroundColor: currentTheme.colors.accent,
-                  color: currentTheme.type === 'dark' ? '#0A1128' : '#FFFFFF',
+                  color: currentTheme.type === "dark" ? "#0A1128" : "#FFFFFF",
                   fontSize: "15px",
                   fontWeight: 700,
                 }}
                 onClick={() => {
-                  const contactSection = document.getElementById('contact');
-                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                  const contactSection = document.getElementById("contact");
+                  contactSection?.scrollIntoView({ behavior: "smooth" });
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = `0 8px 30px ${currentTheme.colors.accent}66`;
@@ -171,10 +174,17 @@ export function HeroSection() {
                   fontSize: "15px",
                   fontWeight: 700,
                 }}
-                onClick={() => window.open('https://drive.google.com/file/d/18EfxlEFA4Jj6-zj5KpFybf8ShDWiKX4q/view?usp=sharing', '_blank')}
+                onClick={() =>
+                  window.open(
+                    "https://drive.google.com/file/d/18EfxlEFA4Jj6-zj5KpFybf8ShDWiKX4q/view?usp=sharing",
+                    "_blank",
+                  )
+                }
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = currentTheme.colors.accent;
-                  e.currentTarget.style.color = currentTheme.type === 'dark' ? '#0A1128' : '#FFFFFF';
+                  e.currentTarget.style.backgroundColor =
+                    currentTheme.colors.accent;
+                  e.currentTarget.style.color =
+                    currentTheme.type === "dark" ? "#0A1128" : "#FFFFFF";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = "transparent";

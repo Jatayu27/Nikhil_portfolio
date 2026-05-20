@@ -42,9 +42,9 @@ export function ExperienceSection() {
       skills: ["React", "PHP (Laravel)", "MySQL", "REST APIs"],
     },
     {
-      company: "Atlantick Solutions",
+      company: "Radiantx Labs",
       role: "React Developer - Udaipur",
-      period: "Apr 2025 - Dec 2025",
+      period: "March 2024 - March 2026",
       description:
         "Developed architectural project management platform and calendar-based scheduling application.",
       achievements: [
@@ -98,7 +98,10 @@ export function ExperienceSection() {
         backgroundImage: `radial-gradient(circle at 20% 50%, ${currentTheme.colors.accent}08 0%, transparent 50%)`,
       }}
     >
-      <div ref={ref} className="max-w-[1200px] mx-auto px-8 md:px-20 relative z-10">
+      <div
+        ref={ref}
+        className="max-w-[1200px] mx-auto px-8 md:px-20 relative z-10"
+      >
         {/* Section Header */}
         <div className="text-center mb-20">
           <motion.div
@@ -149,7 +152,10 @@ export function ExperienceSection() {
           {/* Center Line */}
           <div
             className="absolute left-1/2 top-0 bottom-0 w-0.5 hidden md:block"
-            style={{ backgroundColor: currentTheme.colors.accent, transform: "translateX(-50%)" }}
+            style={{
+              backgroundColor: currentTheme.colors.accent,
+              transform: "translateX(-50%)",
+            }}
           />
 
           {/* Experience Cards */}
@@ -172,7 +178,8 @@ export function ExperienceSection() {
                     backgroundColor: currentTheme.colors.accent,
                     boxShadow: `0 0 0 4px ${currentTheme.colors.primaryLight}, 0 0 12px ${currentTheme.colors.accent}99`,
                     [index % 2 === 0 ? "right" : "left"]: "-40px",
-                    transform: index % 2 === 0 ? "translateX(50%)" : "translateX(-50%)",
+                    transform:
+                      index % 2 === 0 ? "translateX(50%)" : "translateX(-50%)",
                   }}
                 />
 
@@ -267,7 +274,9 @@ export function ExperienceSection() {
                         <li key={i} className="flex items-start gap-3">
                           <div
                             className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
-                            style={{ backgroundColor: currentTheme.colors.accent }}
+                            style={{
+                              backgroundColor: currentTheme.colors.accent,
+                            }}
                           />
                           <span
                             className="font-['Montserrat']"

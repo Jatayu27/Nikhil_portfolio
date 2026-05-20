@@ -20,7 +20,7 @@ export function AboutSection() {
   ];
 
   const stats = [
-    { number: "2.5+", label: "Years Experience" },
+    { number: "3.5+", label: "Years Experience" },
     { number: "10+", label: "Projects Completed" },
     { number: "BCA", label: "Bachelor's Degree" },
     { number: "5+", label: "Happy Clients" },
@@ -41,7 +41,10 @@ export function AboutSection() {
         backgroundColor: currentTheme.colors.primaryLighter,
       }}
     >
-      <div ref={ref} className="max-w-[1200px] mx-auto px-8 md:px-20 relative z-10">
+      <div
+        ref={ref}
+        className="max-w-[1200px] mx-auto px-8 md:px-20 relative z-10"
+      >
         {/* Section Header */}
         <div className="text-center mb-20">
           <motion.div
@@ -84,7 +87,8 @@ export function AboutSection() {
               color: currentTheme.colors.textSecondary,
             }}
           >
-            Passionate React Developer focused on creating seamless user experiences
+            Passionate React Developer focused on creating seamless user
+            experiences
           </motion.p>
         </div>
 
@@ -127,7 +131,7 @@ export function AboutSection() {
                 >
                   <div
                     className="absolute top-2 w-4 h-4 rounded-full"
-                    style={{ 
+                    style={{
                       backgroundColor: currentTheme.colors.accent,
                       boxShadow: `0 0 0 3px ${currentTheme.colors.primaryLight}, 0 0 8px ${currentTheme.colors.accent}66`,
                       left: "-32px",
@@ -173,7 +177,12 @@ export function AboutSection() {
                   lineHeight: 1.85,
                 }}
               >
-                React Developer with hands-on experience in identifying web-based user interactions along with designing & implementing highly-responsive user interface components by deploying React concepts. Proficient in translating designs & wireframes into high-quality code, and writing application interface code via Javascript and ReactJS workflows.
+                React Developer with hands-on experience in identifying
+                web-based user interactions along with designing & implementing
+                highly-responsive user interface components by deploying React
+                concepts. Proficient in translating designs & wireframes into
+                high-quality code, and writing application interface code via
+                Javascript and ReactJS workflows.
               </p>
               <p
                 className="font-['Montserrat']"
@@ -183,7 +192,10 @@ export function AboutSection() {
                   lineHeight: 1.85,
                 }}
               >
-                My expertise includes front-end optimization, API integration, and creating engaging user interfaces. I excel at identifying and resolving technical issues while maintaining code quality and performance standards.
+                My expertise includes front-end optimization, API integration,
+                and creating engaging user interfaces. I excel at identifying
+                and resolving technical issues while maintaining code quality
+                and performance standards.
               </p>
             </div>
 
@@ -249,7 +261,7 @@ export function AboutSection() {
                     e.currentTarget.style.borderColor = `${currentTheme.colors.accent}66`;
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow = '';
+                    e.currentTarget.style.boxShadow = "";
                     e.currentTarget.style.borderColor = `${currentTheme.colors.accent}33`;
                   }}
                 >
