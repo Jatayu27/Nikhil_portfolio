@@ -18,7 +18,7 @@ export function ContactSection() {
       href: "https://linkedin.com/in/nikhil-soni27",
       name: "LinkedIn",
     },
-    { icon: Github, href: "https://github.com/nikhilsoni27", name: "GitHub" },
+    { icon: Github, href: "https://github.com/nikhil-soni27", name: "GitHub" },
   ];
 
   return (
