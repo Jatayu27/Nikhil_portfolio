@@ -174,7 +174,7 @@ export function HeroSection() {
                   fontSize: "15px",
                   fontWeight: 700,
                 }}
-                onClick={() => window.open("/Nikhil Soni_Resume.pdf", "_blank")}
+                onClick={() => window.open("/Nikhil Soni Resume.pdf", "_blank")}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor =
                     currentTheme.colors.accent;
