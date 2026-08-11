@@ -44,7 +44,7 @@ export function ExperienceSection() {
     {
       company: "Radiantx Labs",
       role: "React Developer - Udaipur",
-      period: "May 2024 - May 2026",
+      period: "July 2024 - July 2026",
       description:
         "Developed architectural project management platform and calendar-based scheduling application.",
       achievements: [
